@@ -16,6 +16,8 @@ public class DataReader {
 		ArrayList<Person> allPerson = new ArrayList<Person>();
 		DataReaderForCSV readerCVS = new DataReaderForCSV();
 		DataReaderForTXT readerTXT = new DataReaderForTXT();
+		DataWriter writer = new DataWriter();
+		
 		
 		for(i=0;i<filesName.size();i++) {
 			String filename = filesName.get(i);
@@ -50,6 +52,7 @@ public class DataReader {
 			System.out.println("count: "+allPerson.get(i).count);
 		}
 		
+		writer.write(allPerson);
 	}
 	public File getDirectory(String strDir) throws FileNotFoundException {
 		File dataDir = new File(strDir);
