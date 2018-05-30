@@ -1,0 +1,1 @@
+typeSearchIndex = [{"p":"chatCounter","l":"ChatMessageCounter"},{"p":"chatCounter","l":"DataReader"},{"p":"chatCounter","l":"DataReaderForCSV"},{"p":"chatCounter","l":"DataReaderForTXT"},{"p":"chatCounter","l":"DataWriter"},{"p":"<Unnamed>","l":"Library"},{"p":"<Unnamed>","l":"LibraryTest"},{"p":"chatCounter","l":"Main"},{"p":"chatCounter","l":"Person"}]

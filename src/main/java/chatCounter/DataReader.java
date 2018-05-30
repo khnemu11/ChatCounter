@@ -9,8 +9,19 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
-
+/**
+ * read data and judge scv or file
+ * make list of person that has name, time, string data.
+ * @author khnem
+ *
+ */
 public class DataReader {
+	/**
+	 * judge files type and call right type of object
+	 * 
+	 * @param filesName
+	 * @throws IOException
+	 */
 	public void getData(ArrayList<String> filesName) throws IOException {
 		int i;
 		ArrayList<Person> allPerson = new ArrayList<Person>();
@@ -35,16 +46,6 @@ public class DataReader {
 			}
 		}
 		
-		for(Person p : allPerson) {
-			if(p.name.equals("조정훈")) {
-			for(String key : p.allChatLog.keySet()) {
-				for(int i1=0;i1<p.allChatLog.get(key).size();i1++) {
-					System.out.println("name: "+p.name+" time: "+key+" str: "+p.allChatLog.get(key).get(i1));		
-				}
-			}
-			}
-		}
-		
 		Collections.sort(allPerson);
 		
 		for(i=0;i<allPerson.size();i++) {
@@ -54,18 +55,32 @@ public class DataReader {
 		
 		writer.write(allPerson);
 	}
+	/**
+	 * get directory
+	 * @param strDir
+	 * @return
+	 * @throws FileNotFoundException
+	 */
 	public File getDirectory(String strDir) throws FileNotFoundException {
 		File dataDir = new File(strDir);
 		
 		return dataDir;
 	}
-	
+	/**
+	 * get list of files from directory
+	 * @param dataDir
+	 * @return
+	 */
 	public File[] getLIstOfFilesFromDirectory(File dataDir) {
 		File files[]=dataDir.listFiles();
 		
 		return files;
 	}
-	
+	/**
+	 * for reader pointer files by files 
+	 * @param files
+	 * @return
+	 */
 	public ArrayList<String> readFiles(File[] files){
 		ArrayList<String> filesName = new ArrayList<String>();
 		
